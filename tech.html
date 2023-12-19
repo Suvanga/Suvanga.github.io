@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="tech.html" id="navbar__logo"></i>ABOUT ME</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="/" class="navbar__links">HOME</a>
+            </li>
+            <li class="navbar__item">
+              <a href="/tech.html" class="navbar__links">ABOUT</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__links" onclick="loadProjectSection()">PROJECTS</a>
+            </li>
+            <li class="navbar__btn"><a href="mailto:suvangadhakal0@gmail.com" class="button">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+
+    <!-- Hero Section -->
+<div class="main">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>ABOUT ME</h1>
+        <h2></h2>
+        <p>A Junior Computer Science and Engineering student 
+          at the University of Toledo, to know more about me, 
+          please look at my resume</p>
+        <button class="main__btn"><a href="images/Suvanga%20Dhakal%20Resume.pdf" target="_blank">Resume</a></button>
+        <p></p>
+      </div>
+      <div class="main__img--container">
+        <img id="main__img" src="images/pic7.svg" />
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Services Section -->
+   
+    <div class="services2">
+      <h1>Hobbies</h1>
+      <div class="services__container2">
+        <div class="services__card2">
+          <h2>MUSIC IS IN MY BLOOD</h2>
+          <p>I used to be a drummer in a local band, here is a video of me performing :)</p>
+          <a href="https://www.youtube.com/watch?v=IKt46yd31BM"><button>Watch Performance</button></a>
+        </div>
+        <div class="services__card2">
+          <h2>POEMS</h2>
+          <p> Love writing about good and bad experiences in life</p>
+          <a href="images/Poems.pdf"><button>Read Poems</button></a>
+        </div>
+      </div>
+    </div>
+
+<!-- Footer Section -->
+<div class="footer__container">
+  <div class="footer__links">
+    <div class="footer__link--wrapper">
+      <div class="footer__link--items">
+        <h2>About Me</h2>
+        <a href="images/Suvanga%20Dhakal%20Resume.pdf">Resume</a>
+         <a href="images/cse.pdf">Education</a>
+         <a href=""></a>
+        <a href=""></a>
+      </div>
+      <div class="footer__link--items">
+        <h2>Professional</h2>
+        <a href="https://www.linkedin.com/in/sdhakal8/">Linkedin </a>
+        <a href="https://github.com/Suvanga">Github </a>
+        <a href="mailto:suvangadhakal0@gmail.com">Gmail</a>
+        <a href="tel:+14196990931">Phone</a>
+      </div>
+    </div>
+    <div class="footer__link--wrapper">
+      <div class="footer__link--items">
+        <h2>Social Media</h2>
+        <a href="https://www.youtube.com/@suvangadhz2126">Youtube </a>
+        <a href="https://www.facebook.com/suvanga.dhz/">Facebook </a>
+        <a href="https://www.instagram.com/suvanga_d/">Instagram </a>
+        <a href="https://twitter.com/Suvanga_222">Twitter </a>
+    
+      </div>
+      <div class="footer__link--items">
+        <h2>Web Sections</h2>
+        <a href="/">Home</a> <a href="/tech.html">About</a>
+        <!-- Link to the projects section using an anchor -->
+        <a href="#" onclick="loadProjectSection()">Projects</a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </div>
+  </div>
+  <section class="social__media">
+    <div class="social__media--wrap">
+      <div class="footer__logo">
+        <a href="/" id="footer__logo">Suvanga Dhakal </a>
+      </div>
+      <p class="website__rights">© Suvanga 2023. All rights reserved</p>
+      <div class="social__icons">
+        <a
+          class="social__icon--link"
+          href="https://www.facebook.com/suvanga.dhz/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          class="social__icon--link"
+          href="https://www.instagram.com/suvanga_d/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          class="social__icon--link"
+          href="https://www.youtube.com/@suvangadhz2126"
+          target="_blank"
+          aria-label="Youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          class="social__icon--link"
+          href="https://twitter.com/Suvanga_222"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          class="social__icon--link"
+          href="https://www.linkedin.com/in/sdhakal8/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
