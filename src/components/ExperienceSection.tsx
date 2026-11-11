@@ -1,8 +1,24 @@
 import { motion } from 'motion/react';
-import { Briefcase, Building2, GraduationCap, Calendar, MapPin, Sparkles } from 'lucide-react';
-
+import { Briefcase, Building2, GraduationCap, Calendar, MapPin, Sparkles, Rocket, ExternalLink } from 'lucide-react';
 export function ExperienceSection() {
   const experiences = [
+    {
+      company: 'The Meeting Room, Inc.',
+      role: 'Chief Technology Officer',
+      location: 'Toledo, OH, USA',
+      period: '08/2026 - Current',
+      type: 'Previous',
+      link: 'https://getinthemeetingroom.com',
+      achievements: [
+        'Platform Architecture: Architected and launched The Meeting Room, an all-in-one operating platform for coaches and athletic departments that unifies messaging, recruiting, a media library, a digital whiteboard, and a jobs feed in one product across desktop, tablet, and mobile',
+        'AI Product Engineering: Led development of COACH, a role-adaptive AI assistant grounded in each program\'s rosters, film, calendars, and channels that drafts sport-specific practice plans, scouts opponents, and ranks recruits',
+        'Real-Time Collaboration: Built DMs, group threads, staff channels, and @mentions, with every attachment, film clip, whiteboard, and recording saved to a searchable library',
+        'Onboarding Automation: Engineered program onboarding with school autofill, roster scraping, and a guided tour, taking an entire athletic department live in under a week',
+        'Technical Leadership: Own technical strategy and the end-to-end development lifecycle as founding CTO, setting engineering standards and turning coaches\' workflows into shipped features alongside the founders'
+      ],
+      gradient: 'from-green-600 to-lime-500',
+      icon: Rocket
+    },
     {
       company: 'Whirlpool',
       role: 'Software Engineer Intern',
@@ -95,8 +111,7 @@ export function ExperienceSection() {
             </span>
           </h2>
           <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto px-4">
-            Delivering impactful solutions across manufacturing, healthcare IT, and enterprise systems
-          </p>
+            Delivering impactful solutions across sports tech, manufacturing, healthcare IT, and enterprise systems          </p>
         </motion.div>
 
         <div className="space-y-8">
@@ -166,8 +181,19 @@ export function ExperienceSection() {
                     <div className="flex-1">
                       <h3 className="text-3xl font-bold text-white mb-2">{exp.role}</h3>
                       <div className="flex flex-wrap items-center gap-4 mb-4">
-                        <span className="text-xl text-purple-300 font-semibold">{exp.company}</span>
-                        <span className="flex items-center gap-1 text-gray-300">
+                        {exp.link ? (
+                          <a
+                            href={exp.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 text-xl text-purple-300 font-semibold hover:text-purple-200 underline-offset-4 hover:underline"
+                          >
+                            {exp.company}
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        ) : (
+                          <span className="text-xl text-purple-300 font-semibold">{exp.company}</span>
+                        )}                        <span className="flex items-center gap-1 text-gray-300">
                           <MapPin className="w-4 h-4" />
                           {exp.location}
                         </span>
