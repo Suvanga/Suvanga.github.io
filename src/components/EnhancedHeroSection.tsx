@@ -180,7 +180,7 @@ export function EnhancedHeroSection() {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <motion.a
-            href="/profile/resume.pdf"
+            href="/resume.pdf"
             download="Suvanga_Dhakal_Resume.pdf"
             className="px-6 sm:px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-full text-base sm:text-lg flex items-center justify-center gap-3 shadow-lg"
             whileHover={{

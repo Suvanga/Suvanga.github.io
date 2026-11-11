@@ -64,7 +64,7 @@ export function StickyNav() {
 
             {/* Resume Download Button */}
             <motion.a
-              href="/profile/resume.pdf"
+              href="/resume.pdf"
               download="Suvanga_Dhakal_Resume.pdf"
               className="ml-2 flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm"
               whileHover={{ 
