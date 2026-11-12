@@ -17,7 +17,7 @@ export function Footer() {
       title: 'Professional',
       links: [
         { label: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/Suvanga' },
-        { label: 'Github', icon: Github, href: 'https://suvanga.github.io' },
+        { label: 'Github', icon: Github, href: 'https://github.com/Suvanga' },
         { label: 'Gmail', icon: Mail, href: 'mailto:suvangadhakal0@gmail.com' },
         { label: 'Phone', icon: Phone, href: 'tel:+14196990931' }
       ]
@@ -41,7 +41,7 @@ export function Footer() {
   ];
 
   const socialIcons = [
-    { icon: Github, href: 'https://suvanga.github.io', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Suvanga', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/Suvanga', label: 'LinkedIn' },
     { icon: Facebook, href: 'https://facebook.com/suvanga', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/suvanga_d/', label: 'Instagram' },

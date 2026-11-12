@@ -49,14 +49,14 @@ export function ExperienceSection() {
     },
     {
       company: 'University of Toledo',
-      role: 'IT Technician',
+      role: 'IT Technician II',
       location: 'Toledo, OH, USA',
-      period: '01/2022 - Current',
-      type: 'Current',
+      period: '01/2022 - 07/2026',
+      type: 'Previous',
       achievements: [
-        'System Administration: Manage the hardware and software ecosystem for 500+ users, resolving complex technical tickets with a 95% success rate while reducing average ticket resolution time by 35%',
-        'Enterprise Support: Maintain critical availability for the Epic EMR system, ensuring 99.9% uptime for medical staff and supporting high-stakes clinical operations',
-        'Technology Implementation: Spearheaded the deployment of emerging technology updates across campus facilities, enhancing overall IT support efficiency by 20% through proactive maintenance',
+        'System Administration: Managed the hardware and software ecosystem for 2,000+ users, resolving complex technical tickets with a 95% success rate while minimizing system downtime',
+        'Enterprise Support: Maintained critical availability for the Epic EMR system, ensuring 99.9% uptime for medical staff and supporting high-stakes clinical operations',
+        'Technology Implementation: Led the rollout of technology updates across campus facilities through proactive maintenance',
         'Mentorship: Trained and onboarded new student technicians on hospital IT protocols, ticketing workflows, and hardware troubleshooting standards'
       ],
       gradient: 'from-green-600 to-emerald-600',

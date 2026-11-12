@@ -61,7 +61,7 @@ export function EnhancedHeroSection() {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
         >
           <motion.div
             className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-gradient-to-r from-purple-600/30 to-blue-600/30 border border-purple-500/40 rounded-full mb-8 backdrop-blur-sm max-w-full"
@@ -76,7 +76,7 @@ export function EnhancedHeroSection() {
             transition={{ duration: 3, repeat: Infinity }}
           >
             <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300 flex-shrink-0" />
-            <span className="text-sm sm:text-base text-purple-200 font-semibold text-center">AI/ML Engineer & Full Stack Developer</span>
+            <span className="text-sm sm:text-base text-purple-200 font-semibold text-center">CTO @ The Meeting Room · AI/ML & Full-Stack Engineer</span>
             <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-blue-300 flex-shrink-0" />
           </motion.div>
         </motion.div>
@@ -84,7 +84,7 @@ export function EnhancedHeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-8 px-2 leading-[1.3]">
             <motion.span
@@ -110,7 +110,7 @@ export function EnhancedHeroSection() {
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 max-w-4xl mx-auto font-light px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
         >
           Building intelligent systems that bridge
           <motion.span
@@ -145,7 +145,7 @@ export function EnhancedHeroSection() {
           className="flex flex-wrap gap-3 justify-center mb-10 px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           {[
             { icon: Brain, text: 'Deep Learning', color: 'from-purple-500 to-pink-500' },
@@ -164,7 +164,7 @@ export function EnhancedHeroSection() {
                 }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1 + index * 0.1 }}
+                transition={{ delay: 0.25 + index * 0.05 }}
               >
                 <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
                 <span className="text-sm sm:text-base text-white font-medium whitespace-nowrap">{item.text}</span>
@@ -177,7 +177,7 @@ export function EnhancedHeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <motion.a
             href="/resume.pdf"
@@ -221,11 +221,11 @@ export function EnhancedHeroSection() {
           className="flex gap-4 justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
+          transition={{ delay: 0.35 }}
         >
           {[
             { icon: Mail, href: 'mailto:suvangadhakal0@gmail.com', label: 'Email' },
-            { icon: Github, href: 'https://suvanga.github.io', label: 'GitHub' },
+            { icon: Github, href: 'https://github.com/Suvanga', label: 'GitHub' },
             { icon: Linkedin, href: 'https://linkedin.com/in/Suvanga', label: 'LinkedIn' },
           ].map((social, index) => {
             const Icon = social.icon;
@@ -244,7 +244,7 @@ export function EnhancedHeroSection() {
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5 + index * 0.1 }}
+                transition={{ delay: 0.35 + index * 0.05 }}
                 aria-label={social.label}
               >
                 <Icon className="w-5 h-5 text-gray-300" />
@@ -254,27 +254,6 @@ export function EnhancedHeroSection() {
         </motion.div>
       </div>
 
-      {/* Animated scroll indicator */}
-      <motion.div
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{
-          opacity: { delay: 2 },
-          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-        }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-purple-300 text-sm">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center pt-2">
-            <motion.div
-              className="w-2 h-2 bg-purple-400 rounded-full"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </div>
-      </motion.div>
-    </section>
+      </section>
   );
 }

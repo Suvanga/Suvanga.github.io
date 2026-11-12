@@ -20,8 +20,8 @@ export function ContactSection() {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'suvanga.github.io',
-      href: 'https://suvanga.github.io',
+      value: 'github.com/Suvanga',
+      href: 'https://github.com/Suvanga',
       gradient: 'from-green-600 to-emerald-600'
     },
     {
