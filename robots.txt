@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suvanga.github.io/sitemap.xml
