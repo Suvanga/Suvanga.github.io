@@ -5,9 +5,62 @@ export type Post = { slug: string; title: string; date: string; summary: string;
 
 export const posts: Post[] = [
   {
+    slug: 'agents-write-code-engineers-design-systems',
+    title: 'Agents write the code. Engineers decide what breaks first.',
+    date: '2026-11-08',
+    summary:
+      'Coding with AI agents is faster and better when it is done correctly. But most new SaaS is shipping with the same security holes, and system design is the skill that closes them.',
+    body: `Most of the code in a new SaaS product can now be written by an AI agent. I think that is good news. I also think it is why so many new products are one curious user away from a breach. Both are true, and the gap between them is system design.
+
+## Coding with agents is better, when it is done correctly
+
+Give an agent a clear spec, a test suite, and a small scope, and it will produce working code faster than any person can type it. It does not get bored on the fortieth test case or skip the migration script. Done correctly, agentic coding looks like this:
+
+- **Spec first.** Write down the inputs, the outputs, the failure cases, and what must never happen, before the agent writes a line.
+- **Tests are the contract.** The work is done when the tests pass, and a human writes or reviews those tests.
+- **Small changes.** One change, one diff that can be read in full. If nobody can explain a diff, it does not merge.
+- **Least privilege.** The agent works in a sandbox with staging credentials. It never holds production keys.
+- **Security stated, then checked.** Ask for the security requirements in the prompt, then verify them with scanners and review in the pipeline.
+
+The opposite of this is prompting until the demo works and shipping whatever came out. That is not agentic engineering. That is hoping.
+
+## Code that compiles is not code that is safe
+
+[Veracode's Spring 2026 testing](https://veracode.com/blog/spring-2026-genai-code-security) found that current models write syntactically correct code more than 95% of the time, while only about 55% of tasks came out secure, a figure that has barely moved in two years. Defenses against cross-site scripting passed 15% of the time. Log injection passed 13%.
+
+The models got much better at making code run. They did not get better at making it safe, unless someone asks and checks.
+
+## What is breaking in SaaS right now
+
+- **Databases with the front door open.** CVE-2025-48757 covers apps generated on the Lovable platform that shipped without proper row-level security: [170 of 1,645 scanned apps](https://www.superblocks.com/blog/lovable-rls-breach) let anyone read or write their tables. Moltbook, a vibe-coded social network, was [breached within three days of launch](https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed) through the same kind of misconfiguration, exposing 1.5 million API tokens and 35,000 email addresses.
+- **Agents holding production keys.** In April 2026 a coding agent working on a staging task at PocketOS used a broadly scoped token to [delete the production database and its volume-level backups](https://www.scworld.com/brief/ai-coding-agent-deletes-production-database-in-seconds) in a single API call, in under ten seconds.
+- **Dependencies that do not exist.** Models invent package names. In one study of 576,000 generated code samples, [about a fifth of the suggested packages were not real](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/). Attackers can register those names and wait for an agent to install them. The attack is called slopsquatting.
+- **Agents that can be talked into things.** The [OWASP Top 10 for Agentic Applications](https://cycode.com/blog/owasp-top-10-agentic-applications/) leads with goal hijacking, tool misuse, and identity and privilege abuse: an agent that reads a poisoned document or web page can be steered into using its real tools against its owner.
+
+None of these are typos. Each one is a design decision that nobody made.
+
+## System design is what separates us from the agents
+
+An agent optimizes for the prompt in front of it. It does not know that the table it just created will hold every customer's data, that the token in the environment can delete production, or that the endpoint it wrote will be called ten thousand times a second next year. Nobody told it, because nobody had decided.
+
+That decision is the engineer's job. **We should know what breaks first when the system scales, before it breaks.** These are the questions I answer before any agent starts typing:
+
+1. **What breaks first at ten times the load?** The database, the queue, the fan-out, or the bill.
+2. **Where are the trust boundaries?** Tenant isolation is enforced on the server and in the database, never in the client.
+3. **What is the blast radius of each credential?** If this key leaks or an agent misuses it, what is the worst that happens?
+4. **What cannot be undone?** Destructive actions need a human confirmation, and backups live somewhere the same key cannot reach.
+5. **How will we know?** Logs, alerts, and an audit trail for everything an agent does.
+
+An agent can implement every one of these answers well. It cannot be trusted to ask the questions.
+
+## The rule I work by
+
+Agents own the typing. Engineers own the design, the trust boundaries, and the answer to what breaks first. The teams that keep that division will ship faster than everyone else, and they will still be standing after their first million users.`,
+  },
+  {
     slug: 'design-team-messaging',
     title: 'System design: team messaging for 10,000 athletic programs',
-    date: '2026-11-11',
+    date: '2026-09-05',
     summary:
       'A design exercise: how I would build Slack-style messaging for coaching staffs, from requirements and estimates to fan-out, attachments, and search.',
     body: `This is a design exercise in the format of a system design interview. The numbers are assumptions I chose to make the trade-offs concrete.
@@ -96,4 +149,4 @@ Accuracy and loss curves told me the first model was fine. Per-class recall and 
 
 I wrote this up in more detail in my paper, *Beyond Accuracy*. You can [read it on GitHub](https://github.com/Suvanga/Mediscan/blob/main/BeyondAccuracy.pdf) or [try the model](https://xrayai.suvanga.com).`,
   },
-];
+].sort((a, b) => b.date.localeCompare(a.date));
